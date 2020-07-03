@@ -34,6 +34,7 @@
 
 #ifndef ESP32_DIGITAL_LED_LIB_H
 #define ESP32_DIGITAL_LED_LIB_H
+#include "pixeltypes.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -97,7 +98,7 @@ typedef struct {
   int ledType;
   int brightLimit;
   int numPixels;
-  pixelColor_t * pixels;
+  CRGBW * pixels;
   void * _stateVars;
 } strand_t;
 

@@ -215,7 +215,7 @@ int digitalLeds_addStrands(strand_t * strands [], int numStrands)
 
     ledParams_t ledParams = ledParamsAll[pStrand->ledType];
 
-    pStrand->pixels = static_cast<pixelColor_t*>(malloc(pStrand->numPixels * sizeof(pixelColor_t)));
+    pStrand->pixels = static_cast<CRGBW*>(malloc(pStrand->numPixels * sizeof(CRGBW)));
     if (pStrand->pixels == nullptr) {
       return -1;
     }
